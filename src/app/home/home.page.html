@@ -1,14 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      BLE Scanner
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-list>
+    <button ion-item *ngFor="let device of devices" (click)="connectToDevice(device)">
+      <h2>{{ device.name || 'Unnamed' }}</h2>
+      <p>{{ device.id }}</p>
+      <p>RSSI: {{ device.rssi }}</p>
+    </button>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,7 +1,8 @@
 {
   "name": "munevo-ble",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
