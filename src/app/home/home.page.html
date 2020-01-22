@@ -7,17 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let device of devices" (click)="connectToDevice(device)">
-      <h2>{{ device.name || 'Unnamed' }}</h2>
-      <p>{{ device.id }}</p>
-      <p>RSSI: {{ device.rssi }}</p>
-    </button>
-  </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
+    <p>{{ respondMessage }}</p>
     <p>{{ statusMessage }}</p>
+    <p>{{ statusMessagePeripheral }}</p>
+    <p>{{ ServiceMessage }}</p>
   </ion-toolbar>
 </ion-footer>
